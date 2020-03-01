@@ -1,0 +1,418 @@
+
+/*! nouislider - 9.2.0 - 2017-01-11 10:35:35 */
+.nice-select {
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+  clear: both;
+  cursor: pointer;
+  display: inline-block;
+  outline: none;
+  padding-left: 0;
+  padding-right: 22px;
+  position: relative;
+  text-align: left!important;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+  width: auto
+}
+
+.nice-select:hover {
+  border-color: #dbdbdb
+}
+
+.nice-select.open,.nice-select:active,.nice-select:focus {
+  border-color: #999
+}
+
+.nice-select:after {
+  position: absolute;
+  right: 0;
+  content: " ";
+  width: 0;
+  height: 0;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-top: 9px solid #000
+}
+
+.nice-select.open:after {
+  transform: unset;
+}
+
+.nice-select.open .list {
+  opacity: 1;
+  pointer-events: auto;
+  -webkit-transform: scale(1) translateY(0);
+  -ms-transform: scale(1) translateY(0);
+  transform: scale(1) translateY(0)
+}
+
+.nice-select.disabled {
+  border-color: #ededed;
+  color: #999;
+  pointer-events: none
+}
+
+.nice-select.disabled:after {
+  border-color: #ccc
+}
+
+.nice-select.wide {
+  width: 100%
+}
+
+.nice-select.wide .list {
+  left: 0!important;
+  right: 0!important
+}
+
+.nice-select.right {
+  float: right
+}
+
+.nice-select.right .list {
+  left: auto;
+  right: 0
+}
+
+.nice-select.small {
+  font-size: 12px;
+  height: 36px;
+  line-height: 34px
+}
+
+.nice-select.small:after {
+  height: 4px;
+  width: 4px
+}
+
+.nice-select.small .option {
+  line-height: 34px;
+  min-height: 34px
+}
+
+.nice-select .list {
+  background-color: hsla(0,0%,100%,.96);
+  box-sizing: border-box;
+  margin-top: 4px;
+  opacity: 0;
+  overflow: hidden;
+  padding: 10px 0;
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  -webkit-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-transform: scale(.75) translateY(-21px);
+  -ms-transform: scale(.75) translateY(-21px);
+  transform: scale(.75) translateY(-21px);
+  -webkit-transition: all .2s cubic-bezier(.5,0,0,1.25),opacity .15s ease-out;
+  transition: all .2s cubic-bezier(.5,0,0,1.25),opacity .15s ease-out;
+  z-index: 1009;
+  max-height: 214px;
+  overflow-y: auto
+}
+
+.nice-select .list:hover .option:not(:hover) {
+  background-color: transparent!important
+}
+
+.nice-select .option {
+  cursor: pointer;
+  list-style: none;
+  outline: none;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-align: left;
+  -webkit-transition: all .2s;
+  transition: all .2s
+}
+
+.nice-select .option:hover {
+  color: #d25078
+}
+
+.nice-select .option.selected {
+  font-family: SiteSans120,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400
+}
+
+.nice-select .option.disabled {
+  background-color: transparent;
+  color: #999;
+  cursor: default
+}
+
+.no-csspointerevents .nice-select .list {
+  display: none
+}
+
+.no-csspointerevents .nice-select.open .list {
+  display: block
+}
+
+.nice-select.Pink,.nice-select.White {
+  background-color: #fff;
+  padding: 7px 40px 7px 20px
+}
+
+.nice-select.Pink span.current,.nice-select.White span.current {
+  width: 100%;
+  display: block!important
+}
+
+.nice-select.Pink.Bold,.nice-select.White.Bold {
+  font-family: SiteSans140,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400
+}
+
+.nice-select.Pink:after,.nice-select.White:after {
+  top: 13px;
+  right: 20px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 9px solid #999;
+  -webkit-transition: -webkit-all .2s;
+  -moz-transition: -moz-all .2s;
+  -o-transition: -o-all .2s;
+  transition: all .2s
+}
+
+.nice-select.Pink:hover:after,.nice-select.White:hover:after {
+  border-top: 9px solid #000
+}
+
+.nice-select.Pink .list,.nice-select.White .list {
+  left: 0!important;
+  right: 0;
+  background-color: #e6638b;
+  color: #fff;
+  font-family: SiteSans60,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  padding: 0!important;
+  margin-top: 0!important
+}
+
+.nice-select.Pink .list .option,.nice-select.White .list .option {
+  padding: 5px 20px;
+  border-bottom: 1px solid #eb83a2
+}
+
+.nice-select.Pink .list .option:hover,.nice-select.White .list .option:hover {
+  background-color: #d25078;
+  color: #fff!important
+}
+
+.nice-select.Pink .list .option.disabled,.nice-select.White .list .option.disabled {
+  background-color: #eb83a2;
+  color: #fff!important
+}
+
+.nice-select.Pink {
+  background-color: #eb83a2
+}
+
+.nice-select.Pink:after {
+  border-top: 9px solid #fff!important
+}
+
+.nice-select:after {
+  border-bottom: none;
+  transform: unset;
+  margin-top:-7px;
+}
+
+.nice-select{
+  border: none;
+}
+
+.nice-select .option.selected {
+  font-family: SiteSans120,Helvetica,Arial,sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+.clear{
+  clear: both;
+}
+
+
+
+.font_size_div{
+  float:left;
+  margin-top:10px;
+}
+
+.range_slider{
+  float:left;
+}
+
+.font_size_slider {
+  -webkit-appearance: none;
+  width: 192px;
+  height: 2px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin-top:17px;
+  padding:0px;
+}
+
+.font_preview{
+  line-height:initial;
+  margin-top:10px;
+  margin-bottom:20px;
+  padding:40px 0px;
+}
+
+.font_preview input{
+  border:none;
+  box-shadow: none;
+  padding:0px;
+}
+
+.font_preview input:focus{
+  box-shadow: none;
+  border:1px solid rgb(161,195,250);
+}
+
+.font_size_slider:hover {
+  opacity: 1;
+}
+
+.font_size_slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 11px;
+  height: 11px;
+  border-radius: 10px;
+  background: black;
+  cursor: pointer;
+}
+
+.font_size_slider::-moz-range-thumb {
+  width: 11px;
+  height: 11px;
+  border-radius: 10px;
+  background: black;
+  cursor: pointer;
+}
+
+.font_gallery{
+  border-top:1px solid black;
+}
+
+.mb15{
+  width:16.6666%;
+  float:left;
+}
+
+.btn_download{
+  margin-left:10px;
+  margin-right:10px;
+  text-align: center;
+  border:1px solid black;
+  padding-top:6px;
+  padding-bottom:6px;
+  padding-left:10px;
+  padding-right:10px;
+  background-color: #5cb85c;
+  border:none;
+  border-radius: 20px;
+}
+.btn_download a{
+  color:white;
+  font-size:13px;
+}
+
+.btn_download a:hover{
+  color:white;
+}
+
+
+.font_preview{
+  overflow:hidden;
+  white-space: nowrap;
+  color:black;
+}
+
+.font_gallery .mb15{
+  height:150px;
+  padding-left:10px;
+  padding-right:10px;
+  padding-bottom: 10px;
+  margin-bottom:30px;
+}
+
+.font_gallery .mb15 img{
+  cursor: pointer;
+}
+
+.font_gallery{
+  height:600px;
+  overflow:auto;
+}
+
+
+.font_gallery .mb15 p{
+  text-align: center;
+}
+.font_gallery .mb15 .font_family{
+  display: none;
+}
+
+.font_gallery img{
+  width:100%;
+  height: 100%;
+}
+
+.font_gallery{
+  padding:10px;
+}
+
+@media (max-width: 1024px){
+  .font_gallery .mb15 {
+      width:25%;
+  }
+  .font_gallery{
+    padding:0px;
+    padding-top:10px;
+  }
+}
+
+@media (max-width: 680px){
+  .font_gallery .mb15 {
+      width:50%;
+  }
+  .font_gallery{
+    padding:0px;
+    padding-top:10px;
+  }
+}
+
+@font-face {
+	font-family: "Breno Hairline";
+	src: url("/assets/webfonts/SERVER/Project199/Breno-Hairline-7047dd5b3efdf01ee92cda656ec156db.woff2") format("woff2"), url("/assets/webfonts/SERVER/Project199/Breno-Hairline-16971e22d6c233cde25759ffcd632e4d.woff") format("woff");
+}
+
